@@ -1,0 +1,14 @@
+{
+	"port": 8080,
+	"influx_host": "HOST",
+	"influx_port": "8086",
+	"influx_user": "USER",
+	"influx_pw": "SECRET",
+	"influx_db": "DATABASE",
+	"clients": {
+		"test1": { "secret": "testink" }
+	},
+	"acl": {
+		"test": [ "test1" ]
+	}
+}

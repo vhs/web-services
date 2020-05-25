@@ -1,0 +1,3 @@
+[submodule "services/website"]
+	path = services/website
+	url = git@github.com:vhs/docker-vhs-website

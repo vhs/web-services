@@ -1,0 +1,7 @@
+.env
+.mounted
+docker-compose.override.yml
+secrets
+tmp/**
+env.default
+**devtest**

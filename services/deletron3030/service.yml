@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  deletron3030:
+    container_name: deletron3030
+    image: vanhack/deletron3030
+    network_mode: bridge
+    restart: always
+    environment:
+      VIRTUAL_HOST: deletron3030.vanhack.ca
+      LETSENCRYPT_HOST: deletron3030.vanhack.ca
+    env_file:
+      - ./services/deletron3030/env

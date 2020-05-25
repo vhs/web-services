@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  isvhsopen:
+    container_name: isvhsopen
+    image: vanhack/isvhsopen
+    network_mode: bridge
+    restart: always
+    environment:
+      VIRTUAL_HOST: isvhsopen.com,www.isvhsopen.com,isvhsopen.vanhack.ca,door.vanhack.ca,isvhsopen.vanhack.space,door.vanhack.space
+      LETSENCRYPT_HOST: isvhsopen.com,www.isvhsopen.com,isvhsopen.vanhack.ca,door.vanhack.ca,isvhsopen.vanhack.space,door.vanhack.space
+    env_file:
+      - ./env/_influxdb
+      - ./env/_slack

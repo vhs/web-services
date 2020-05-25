@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    depends_on:
+      - influxdb
+    links:
+      - influxdb:influxdb
+    network_mode: bridge
+    restart: always
+    environment:
+      VIRTUAL_HOST: stats.vanhack.ca
+      LETSENCRYPT_HOST: stats.vanhack.ca
+    ports:
+      - 3000:3000
+    volumes:
+      - ./services/grafana/config:/etc/grafana
+      - ./services/grafana/data:/var/lib/grafana

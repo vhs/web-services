@@ -1,0 +1,28 @@
+{
+	"cache_settings" : {
+		"timeout" : 900000
+	},
+	"sources": {
+		"feed_instagram": {
+			"url": "https://api.instagram.com/v1/users/self/media/recent/",
+			"token": "<SECRET>",
+			"fetch_limit": 30,
+			"limit": 3
+		},
+		"feed_blog": {
+			"type": "rss",
+			"url": "https://vanhack.ca/wp/feed/",
+			"limit": 10
+		},
+		"feed_projects": {
+			"type": "rss",
+			"url": "https://talk.vanhack.ca/c/projects.rss",
+			"limit": 10
+		},
+		"feed_forum": {
+			"type": "rss",
+			"url": "https://talk.vanhack.ca/latest.rss",
+			"limit": 10
+		}
+	}
+}
