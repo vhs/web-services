@@ -1,4 +1,4 @@
-version: "3.3"
+version: "2.4"
 services:
   nginx-proxy-letsencrypt:
     container_name: nginx_proxy_letsencrypt
@@ -8,7 +8,7 @@ services:
     network_mode: bridge
     restart: always
     volumes:
-    - ./core/nginx/certs:/etc/nginx/certs:rw
+    - ./services/nginx-proxy/certs:/etc/nginx/certs:rw
     - /var/run/docker.sock:/var/run/docker.sock:ro
     volumes_from:
     - service:nginx-proxy:rw
