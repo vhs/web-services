@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  redirect:
+    container_name: r
+    image: vanhack/redirect
+    network_mode: bridge
+    restart: always
+    volumes:
+    - ./services/r/config.json:/app/config.json
+    environment:
+      VIRTUAL_HOST: r.vanhack.ca
+      LETSENCRYPT_HOST: r.vanhack.ca
