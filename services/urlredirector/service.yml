@@ -1,8 +1,8 @@
 version: '2.4'
 
 services:
-  r:
-    container_name: r
+  urlredirector:
+    container_name: urlredirector
     image: vanhack/redirect
     network_mode: bridge
     restart: always
