@@ -7,7 +7,7 @@ services:
     network_mode: bridge
     restart: always
     volumes:
-    - ./services/r/config.json:/app/config.json
+    - ./services/urlredirector/config.json:/app/config.json
     environment:
       VIRTUAL_HOST: r.vanhack.ca
       LETSENCRYPT_HOST: r.vanhack.ca
