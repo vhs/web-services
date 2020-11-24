@@ -1,7 +1,7 @@
 version: '2.4'
 
 services:
-  redirect:
+  r:
     container_name: r
     image: vanhack/redirect
     network_mode: bridge
