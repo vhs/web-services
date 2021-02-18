@@ -7,5 +7,5 @@ services:
     network_mode: bridge
     restart: always
     environment:
-      VIRTUAL_HOST: itlb.vanhack.ca,isthelaserbusy.com,www.isthelaserbusy.com
-      LETSENCRYPT_HOST: itlb.vanhack.ca,isthelaserbusy.com,www.isthelaserbusy.com
+      VIRTUAL_HOST: itlb.vanhack.ca,isthelaserbusy.vanhack.ca
+      LETSENCRYPT_HOST: itlb.vanhack.ca,isthelaserbusy.vanhack.ca
