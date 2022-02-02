@@ -1,10 +1,8 @@
 version: "2.4"
+
 services:
   TEMPLATE:
-    container_name: TEMPLATE
-    image: vanhack/TEMPLATE
     network_mode: bridge
-    restart: always
     environment:
       VIRTUAL_HOST: TEMPLATE.vanhack.ca
       LETSENCRYPT_HOST: TEMPLATE.vanhack.ca

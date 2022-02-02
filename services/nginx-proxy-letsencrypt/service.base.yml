@@ -1,0 +1,15 @@
+version: "2.4"
+
+services:
+  acme-companion:
+    image: nginxproxy/acme-companion
+    container_name: nginx-proxy-acme
+    restart: always
+    depends_on:
+    - nginx-proxy
+    volumes_from:
+    - service:nginx-proxy:rw
+    volumes:
+    - ./services/nginx-proxy/certs:/etc/nginx/certs:rw
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    - acme:/etc/acme.sh

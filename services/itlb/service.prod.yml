@@ -1,11 +1,8 @@
 version: "2.4"
+
 services:
   itlb:
-    container_name: itlb
-    image: vanhack/itlb:latest
-    entrypoint: ["bin/www"]
     network_mode: bridge
-    restart: always
     environment:
       VIRTUAL_HOST: itlb.vanhack.ca,isthelaserbusy.vanhack.ca,isthelaserbusy.com,www.isthelaserbusy.com
       LETSENCRYPT_HOST: itlb.vanhack.ca,isthelaserbusy.vanhack.ca,isthelaserbusy.com,www.isthelaserbusy.com

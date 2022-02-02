@@ -1,0 +1,12 @@
+version: "2.4"
+
+services:
+  isvhsopen:
+    image: vanhack/isvhsopen:latest
+    container_name: isvhsopen
+    restart: always
+    depends_on:
+      - influxdb
+    env_file:
+      - ./env/_influxdb
+      - ./env/_slack

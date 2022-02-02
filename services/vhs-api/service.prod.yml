@@ -1,0 +1,8 @@
+version: "2.4"
+
+services:
+  vhs-api:
+    network_mode: bridge
+    environment:
+      VIRTUAL_HOST: api.vanhack.ca
+      LETSENCRYPT_HOST: api.vanhack.ca

@@ -2,12 +2,7 @@ version: "2.4"
 
 services:
   redirect:
-    container_name: redirect
-    image: nginx
     network_mode: bridge
-    restart: always
-    volumes:
-    - ./services/redirect/conf.d:/etc/nginx/conf.d/
     environment:
       VIRTUAL_HOST: "slack.vanhack.ca,slack.vanhack.space,vancouver.vanhack.ca,www.isthelaserbusy.com"
       LETSENCRYPT_HOST: "slack.vanhack.ca,slack.vanhack.space,vancouver.vanhack.ca,www.isthelaserbusy.com"

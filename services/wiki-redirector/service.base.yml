@@ -1,0 +1,9 @@
+version: '2.4'
+
+services:
+  wiki-redirector:
+    image: vanhack/wiki-redirector:latest
+    container_name: wiki-redirector
+    restart: always
+    volumes:
+    - ./services/wiki-redirector/config.json:/app/config.json

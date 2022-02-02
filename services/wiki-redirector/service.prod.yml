@@ -2,12 +2,7 @@ version: '2.4'
 
 services:
   wiki-redirector:
-    container_name: wiki-redirector
-    image: vanhack/wiki-redirector
     network_mode: bridge
-    restart: always
-    volumes:
-    - ./services/wiki-redirector/config.json:/app/config.json
     environment:
       VIRTUAL_HOST: wiki.vanhack.ca,wiki.vanhack.space
       LETSENCRYPT_HOST: wiki.vanhack.ca,wiki.vanhack.space

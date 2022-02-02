@@ -5,3 +5,4 @@ secrets
 tmp/**
 env.default
 **devtest**
+env/_*

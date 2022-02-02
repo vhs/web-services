@@ -1,17 +1,14 @@
 version: "2.4"
+
 services:
   vhs-api:
+    image: vanhack/api:latest
     container_name: vhs-api
-    image: vanhack/api
+    restart: always
     depends_on:
       - influxdb
-    network_mode: bridge
-    restart: always
     links:
       - influxdb:influxdb
-    environment:
-      VIRTUAL_HOST: api.vanhack.ca
-      LETSENCRYPT_HOST: api.vanhack.ca
     env_file:
       - ./env/_influxdb
     volumes:

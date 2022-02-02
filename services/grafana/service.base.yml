@@ -1,17 +1,14 @@
 version: "2.4"
+
 services:
   grafana:
     image: grafana/grafana:7.5.5
     container_name: grafana
+    restart: always
     depends_on:
       - influxdb
     links:
       - influxdb:influxdb
-    network_mode: bridge
-    restart: always
-    environment:
-      VIRTUAL_HOST: stats.vanhack.ca
-      LETSENCRYPT_HOST: stats.vanhack.ca
     ports:
       - 3000:3000
     volumes:

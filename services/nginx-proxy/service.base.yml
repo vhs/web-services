@@ -1,13 +1,13 @@
 version: "2.4"
+
 services:
   nginx-proxy:
-    container_name: nginx-proxy
     image: jwilder/nginx-proxy:latest
-    network_mode: bridge
+    container_name: nginx-proxy
+    restart: always
     ports:
     - 80:80/tcp
     - 443:443/tcp
-    restart: always
     volumes:
     - ./services/nginx-proxy/certs:/etc/nginx/certs:ro
     - ./services/nginx-proxy/conf.d:/etc/nginx/conf.d:rw
