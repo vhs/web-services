@@ -9,5 +9,5 @@ services:
     volumes:
     - ./services/redirect/conf.d:/etc/nginx/conf.d/
     environment:
-      VIRTUAL_HOST: "slack.vanhack.ca,slack.vanhack.space,vancouver.vanhack.ca,wiki.vanhack.ca,wiki.vanhack.space,www.isthelaserbusy.com"
-      LETSENCRYPT_HOST: "slack.vanhack.ca,slack.vanhack.space,vancouver.vanhack.ca,wiki.vanhack.ca,wiki.vanhack.space,www.isthelaserbusy.com"
+      VIRTUAL_HOST: "slack.vanhack.ca,slack.vanhack.space,vancouver.vanhack.ca,www.isthelaserbusy.com"
+      LETSENCRYPT_HOST: "slack.vanhack.ca,slack.vanhack.space,vancouver.vanhack.ca,www.isthelaserbusy.com"
