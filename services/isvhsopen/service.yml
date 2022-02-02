@@ -2,7 +2,7 @@ version: "2.4"
 services:
   isvhsopen:
     container_name: isvhsopen
-    image: vanhack/isvhsopen
+    image: vanhack/isvhsopen:latest
     network_mode: bridge
     restart: always
     depends_on:

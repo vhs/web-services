@@ -2,7 +2,7 @@ version: "2.4"
 services:
   deletron3030:
     container_name: deletron3030
-    image: vanhack/deletron3030
+    image: vanhack/deletron3030:latest
     network_mode: bridge
     restart: always
     environment:

@@ -2,7 +2,7 @@ version: "2.4"
 services:
   itlb:
     container_name: itlb
-    image: vanhack/itlb
+    image: vanhack/itlb:latest
     entrypoint: ["bin/www"]
     network_mode: bridge
     restart: always

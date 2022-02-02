@@ -2,7 +2,7 @@ version: "2.4"
 services:
   nginx-proxy:
     container_name: nginx-proxy
-    image: jwilder/nginx-proxy
+    image: jwilder/nginx-proxy:latest
     network_mode: bridge
     ports:
     - 80:80/tcp
