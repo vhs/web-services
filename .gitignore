@@ -6,3 +6,4 @@ tmp/**
 env.default
 **devtest**
 env/_*
+docker-compose.conf
