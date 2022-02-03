@@ -5,6 +5,8 @@ services:
     image: vanhack/isvhsopen:latest
     container_name: isvhsopen
     restart: always
+    links:
+      - influxdb:influxdb
     depends_on:
       - influxdb
     env_file:
