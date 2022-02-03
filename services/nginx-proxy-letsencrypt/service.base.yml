@@ -1,9 +1,9 @@
 version: "2.4"
 
 services:
-  acme-companion:
+  nginx-proxy-letsencrypt:
     image: nginxproxy/acme-companion
-    container_name: nginx-proxy-acme
+    container_name: nginx-proxy-letsencrypt
     restart: always
     depends_on:
     - nginx-proxy
