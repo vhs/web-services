@@ -12,4 +12,4 @@ services:
     volumes:
     - ./services/nginx-proxy/certs:/etc/nginx/certs:rw
     - /var/run/docker.sock:/var/run/docker.sock:ro
-    - acme:/etc/acme.sh
+    - ./services/nginx-proxy-letsencrypt/data:/etc/acme.sh
