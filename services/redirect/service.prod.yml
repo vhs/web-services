@@ -1,0 +1,8 @@
+version: "2.4"
+
+services:
+  redirect:
+    network_mode: bridge
+    environment:
+      VIRTUAL_HOST: "slack.vanhack.ca,slack.vanhack.space,vancouver.vanhack.ca"
+      LETSENCRYPT_HOST: "slack.vanhack.ca,slack.vanhack.space,vancouver.vanhack.ca"

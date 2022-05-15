@@ -1,0 +1,10 @@
+version: "2.4"
+
+services:
+  grafana:
+    network_mode: bridge
+    links:
+      - influxdb:influxdb
+    environment:
+      VIRTUAL_HOST: stats.vanhack.ca
+      LETSENCRYPT_HOST: stats.vanhack.ca

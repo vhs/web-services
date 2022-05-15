@@ -1,0 +1,8 @@
+version: '2.4'
+
+services:
+  wiki-redirector:
+    network_mode: bridge
+    environment:
+      VIRTUAL_HOST: wiki.vanhack.ca,wiki.vanhack.space
+      LETSENCRYPT_HOST: wiki.vanhack.ca,wiki.vanhack.space
