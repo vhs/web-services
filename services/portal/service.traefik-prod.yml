@@ -1,0 +1,13 @@
+version: "2.4"
+
+services:
+  portal:
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.vanhack-portal-prod.rule=Host(`portal.vanhack.ca`)"
+      - "traefik.http.routers.vanhack-portal-prod.entryPoints=web,websecure"
+      - "traefik.http.routers.vanhack-portal-prod.tls=true"
+      - "traefik.http.routers.vanhack-portal-prod.tls.certresolver=lets-encrypt"
+      - "traefik.docker.network=proxy"

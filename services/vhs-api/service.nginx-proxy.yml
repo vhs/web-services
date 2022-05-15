@@ -2,6 +2,8 @@ version: "2.4"
 
 services:
   vhs-api:
+    links:
+      - influxdb:influxdb
     network_mode: bridge
     environment:
       VIRTUAL_HOST: api.vanhack.ca

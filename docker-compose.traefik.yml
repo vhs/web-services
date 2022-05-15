@@ -1,0 +1,8 @@
+version: '2.4'
+
+networks:
+  proxy:
+    external: true
+  website-db:
+    name: website-db
+    driver: bridge

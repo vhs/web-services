@@ -1,0 +1,13 @@
+version: "2.4"
+
+services:
+  influxdb:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.vanhack-influxdb-test.rule=Host(`influxdb.devtest.vanhack.ca`)"
+      - "traefik.http.routers.vanhack-influxdb-test.entryPoints=web,websecure"
+      - "traefik.http.routers.vanhack-influxdb-test.tls=true"
+      - "traefik.http.routers.vanhack-influxdb-test.tls.certresolver=lets-encrypt"
+      - "traefik.docker.network=proxy"
+    networks:
+      - proxy

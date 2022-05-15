@@ -1,0 +1,13 @@
+version: '2.4'
+
+services:
+  wiki-redirector:
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.vanhack-wiki-redirector-prod.rule=(Host(`wiki.vanhack.ca`) || Host(`wiki.vanhack.space`))"
+      - "traefik.http.routers.vanhack-wiki-redirector-prod.entryPoints=web,websecure"
+      - "traefik.http.routers.vanhack-wiki-redirector-prod.tls=true"
+      - "traefik.http.routers.vanhack-wiki-redirector-prod.tls.certresolver=lets-encrypt"
+      - "traefik.docker.network=proxy"

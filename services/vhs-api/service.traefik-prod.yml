@@ -1,0 +1,13 @@
+version: "2.4"
+
+services:
+  vhs-api:
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.vanhack-api-prod.rule=Host(`api.vanhack.ca`)"
+      - "traefik.http.routers.vanhack-api-prod.entryPoints=web,websecure"
+      - "traefik.http.routers.vanhack-api-prod.tls=true"
+      - "traefik.http.routers.vanhack-api-prod.tls.certresolver=lets-encrypt"
+      - "traefik.docker.network=proxy"
