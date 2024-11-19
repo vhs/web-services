@@ -20,6 +20,7 @@
 
 !generate-default-compose-env.sh
 !generate-docker-compose-conf.sh
+!generate-dot-env.sh
 
 !README.md
 
