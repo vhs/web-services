@@ -1,12 +1,8 @@
 #!/bin/bash
 
-SCRIPTDIR="$(
-    cd $(dirname $0)/$(if [ "$(find $0 -type l)" != "" ]; then dirname $(find $0 -printf '%l'); fi)
-    pwd
-)"
-cd $SCRIPTDIR
+cd "$(dirname "$(realpath "$0")")" || exit 255
 
 echo "Deploy script"
 echo ""
 
-/usr/local/bin/docker-compose up -d
+docker compose up -d
