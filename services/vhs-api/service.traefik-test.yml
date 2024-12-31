@@ -1,12 +1,11 @@
-
 services:
-  vhs-api:
-    networks:
-      - proxy
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.vanhack-api-test.rule=Host(`api.devtest.vanhack.ca`)"
-      - "traefik.http.routers.vanhack-api-test.entryPoints=web,websecure"
-      - "traefik.http.routers.vanhack-api-test.tls=true"
-      - "traefik.http.routers.vanhack-api-test.tls.certresolver=lets-encrypt"
-      - "traefik.docker.network=proxy"
+    vhs-api:
+        networks:
+            - proxy
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.vanhack-api-test.rule=Host(`api.devtest.vanhack.ca`)'
+            - 'traefik.http.routers.vanhack-api-test.entryPoints=web,websecure'
+            - 'traefik.http.routers.vanhack-api-test.tls=true'
+            - 'traefik.http.routers.vanhack-api-test.tls.certresolver=lets-encrypt'
+            - 'traefik.docker.network=proxy'

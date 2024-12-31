@@ -1,12 +1,11 @@
-
 services:
-  influxdb:
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.vanhack-influxdb-prod.rule=Host(`influxdb.vanhack.ca`)"
-      - "traefik.http.routers.vanhack-influxdb-prod.entryPoints=web,websecure"
-      - "traefik.http.routers.vanhack-influxdb-prod.tls=true"
-      - "traefik.http.routers.vanhack-influxdb-prod.tls.certresolver=lets-encrypt"
-      - "traefik.docker.network=proxy"
-    networks:
-      - proxy
+    influxdb:
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.vanhack-influxdb-prod.rule=Host(`influxdb.vanhack.ca`)'
+            - 'traefik.http.routers.vanhack-influxdb-prod.entryPoints=web,websecure'
+            - 'traefik.http.routers.vanhack-influxdb-prod.tls=true'
+            - 'traefik.http.routers.vanhack-influxdb-prod.tls.certresolver=lets-encrypt'
+            - 'traefik.docker.network=proxy'
+        networks:
+            - proxy

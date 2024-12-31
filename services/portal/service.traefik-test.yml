@@ -1,12 +1,11 @@
-
 services:
-  portal:
-    networks:
-      - proxy
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.vanhack-portal-test.rule=Host(`portal.devtest.vanhack.ca`)"
-      - "traefik.http.routers.vanhack-portal-test.entryPoints=web,websecure"
-      - "traefik.http.routers.vanhack-portal-test.tls=true"
-      - "traefik.http.routers.vanhack-portal-test.tls.certresolver=lets-encrypt"
-      - "traefik.docker.network=proxy"
+    portal:
+        networks:
+            - proxy
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.vanhack-portal-test.rule=Host(`portal.devtest.vanhack.ca`)'
+            - 'traefik.http.routers.vanhack-portal-test.entryPoints=web,websecure'
+            - 'traefik.http.routers.vanhack-portal-test.tls=true'
+            - 'traefik.http.routers.vanhack-portal-test.tls.certresolver=lets-encrypt'
+            - 'traefik.docker.network=proxy'

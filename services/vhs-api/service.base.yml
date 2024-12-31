@@ -1,12 +1,11 @@
-
 services:
-  vhs-api:
-    image: vanhack/api:latest
-    container_name: vhs-api
-    restart: always
-    depends_on:
-      - influxdb
-    env_file:
-      - ./env/_influxdb
-    volumes:
-      - ./services/vhs-api/etc:/usr/src/app/etc
+    vhs-api:
+        image: vanhack/api:latest
+        container_name: vhs-api
+        restart: always
+        depends_on:
+            - influxdb
+        env_file:
+            - ./env/_influxdb
+        volumes:
+            - ./services/vhs-api/etc:/usr/src/app/etc

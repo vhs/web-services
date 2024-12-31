@@ -1,14 +1,13 @@
-
 services:
-  nginx-proxy-letsencrypt:
-    image: nginxproxy/acme-companion
-    container_name: nginx-proxy-letsencrypt
-    restart: always
-    depends_on:
-    - nginx-proxy
-    volumes_from:
-    - nginx-proxy:rw
-    volumes:
-    - ./services/nginx-proxy/certs:/etc/nginx/certs:rw
-    - /var/run/docker.sock:/var/run/docker.sock:ro
-    - ./services/nginx-proxy-letsencrypt/data:/etc/acme.sh
+    nginx-proxy-letsencrypt:
+        image: nginxproxy/acme-companion
+        container_name: nginx-proxy-letsencrypt
+        restart: always
+        depends_on:
+            - nginx-proxy
+        volumes_from:
+            - nginx-proxy:rw
+        volumes:
+            - ./services/nginx-proxy/certs:/etc/nginx/certs:rw
+            - /var/run/docker.sock:/var/run/docker.sock:ro
+            - ./services/nginx-proxy-letsencrypt/data:/etc/acme.sh

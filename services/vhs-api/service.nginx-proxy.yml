@@ -1,9 +1,8 @@
-
 services:
-  vhs-api:
-    links:
-      - influxdb:influxdb
-    network_mode: bridge
-    environment:
-      VIRTUAL_HOST: api.vanhack.ca
-      LETSENCRYPT_HOST: api.vanhack.ca
+    vhs-api:
+        links:
+            - influxdb:influxdb
+        network_mode: bridge
+        environment:
+            VIRTUAL_HOST: api.vanhack.ca
+            LETSENCRYPT_HOST: api.vanhack.ca

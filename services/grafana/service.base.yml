@@ -1,13 +1,12 @@
-
 services:
-  grafana:
-    image: grafana/grafana:7.5.5
-    container_name: grafana
-    restart: always
-    depends_on:
-      - influxdb
-    ports:
-      - 3000:3000
-    volumes:
-      - ./services/grafana/config:/etc/grafana
-      - ./services/grafana/data:/var/lib/grafana
+    grafana:
+        image: grafana/grafana:7.5.5
+        container_name: grafana
+        restart: always
+        depends_on:
+            - influxdb
+        ports:
+            - 3000:3000
+        volumes:
+            - ./services/grafana/config:/etc/grafana
+            - ./services/grafana/data:/var/lib/grafana

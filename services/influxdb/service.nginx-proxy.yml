@@ -1,7 +1,6 @@
-
 services:
-  influxdb:
-    network_mode: bridge
-    environment:
-      VIRTUAL_HOST: influxdb.vanhack.ca,influxdb.vanhack.space
-      LETSENCRYPT_HOST: influxdb.vanhack.ca,influxdb.vanhack.space
+    influxdb:
+        network_mode: bridge
+        environment:
+            VIRTUAL_HOST: influxdb.vanhack.ca,influxdb.vanhack.space
+            LETSENCRYPT_HOST: influxdb.vanhack.ca,influxdb.vanhack.space

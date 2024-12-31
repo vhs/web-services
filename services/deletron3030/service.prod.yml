@@ -1,6 +1,6 @@
 services:
-  deletron3030:
-    network_mode: bridge
-    environment:
-      VIRTUAL_HOST: deletron3030.vanhack.ca
-      LETSENCRYPT_HOST: deletron3030.vanhack.ca
+    deletron3030:
+        network_mode: bridge
+        environment:
+            VIRTUAL_HOST: deletron3030.vanhack.ca
+            LETSENCRYPT_HOST: deletron3030.vanhack.ca

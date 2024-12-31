@@ -1,6 +1,6 @@
 services:
-  TEMPLATE:
-    network_mode: bridge
-    environment:
-      VIRTUAL_HOST: TEMPLATE.vanhack.ca
-      LETSENCRYPT_HOST: TEMPLATE.vanhack.ca
+    TEMPLATE:
+        network_mode: bridge
+        environment:
+            VIRTUAL_HOST: TEMPLATE.vanhack.ca
+            LETSENCRYPT_HOST: TEMPLATE.vanhack.ca

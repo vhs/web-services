@@ -1,11 +1,11 @@
 services:
-  TEMPLATE:
-    networks:
-      - proxy
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.vanhack-TEMPLATE-test.rule=Host(`TEMPLATE.devtest.vanhack.ca`)"
-      - "traefik.http.routers.vanhack-TEMPLATE-test.entryPoints=web,websecure"
-      - "traefik.http.routers.vanhack-TEMPLATE-test.tls=true"
-      - "traefik.http.routers.vanhack-TEMPLATE-test.tls.certresolver=lets-encrypt"
-      - "traefik.docker.network=proxy"
+    TEMPLATE:
+        networks:
+            - proxy
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.vanhack-TEMPLATE-test.rule=Host(`TEMPLATE.devtest.vanhack.ca`)'
+            - 'traefik.http.routers.vanhack-TEMPLATE-test.entryPoints=web,websecure'
+            - 'traefik.http.routers.vanhack-TEMPLATE-test.tls=true'
+            - 'traefik.http.routers.vanhack-TEMPLATE-test.tls.certresolver=lets-encrypt'
+            - 'traefik.docker.network=proxy'

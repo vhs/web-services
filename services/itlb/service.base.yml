@@ -1,7 +1,6 @@
-
 services:
-  itlb:
-    image: vanhack/itlb:latest
-    container_name: itlb
-    entrypoint: ["bin/www"]
-    restart: always
+    itlb:
+        image: vanhack/itlb:latest
+        container_name: itlb
+        entrypoint: ['bin/www']
+        restart: always

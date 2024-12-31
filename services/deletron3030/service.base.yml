@@ -1,7 +1,7 @@
 services:
-  deletron3030:
-    image: vanhack/deletron3030:latest
-    container_name: deletron3030
-    restart: always
-    env_file:
-      - ./services/deletron3030/env
+    deletron3030:
+        image: vanhack/deletron3030:latest
+        container_name: deletron3030
+        restart: always
+        env_file:
+            - ./services/deletron3030/env

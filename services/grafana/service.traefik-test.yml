@@ -1,12 +1,11 @@
-
 services:
-  grafana:
-    networks:
-      - proxy
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.vanhack-grafana-test.rule=Host(`stats.devtest.vanhack.ca`)"
-      - "traefik.http.routers.vanhack-grafana-test.entryPoints=web,websecure"
-      - "traefik.http.routers.vanhack-grafana-test.tls=true"
-      - "traefik.http.routers.vanhack-grafana-test.tls.certresolver=lets-encrypt"
-      - "traefik.docker.network=proxy"
+    grafana:
+        networks:
+            - proxy
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.vanhack-grafana-test.rule=Host(`stats.devtest.vanhack.ca`)'
+            - 'traefik.http.routers.vanhack-grafana-test.entryPoints=web,websecure'
+            - 'traefik.http.routers.vanhack-grafana-test.tls=true'
+            - 'traefik.http.routers.vanhack-grafana-test.tls.certresolver=lets-encrypt'
+            - 'traefik.docker.network=proxy'

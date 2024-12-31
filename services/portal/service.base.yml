@@ -1,9 +1,8 @@
-
 services:
-  portal:
-    image: vanhack/vhs-portal:latest
-    container_name: portal
-    restart: always
-    entrypoint: ["bin/www"]
-    volumes:
-    - ./services/portal/config.json:/usr/src/app/config.json
+    portal:
+        image: vanhack/vhs-portal:latest
+        container_name: portal
+        restart: always
+        entrypoint: ['bin/www']
+        volumes:
+            - ./services/portal/config.json:/usr/src/app/config.json

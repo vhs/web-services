@@ -1,7 +1,6 @@
-
 services:
-  urlredirector:
-    network_mode: bridge
-    environment:
-      VIRTUAL_HOST: r.vanhack.ca
-      LETSENCRYPT_HOST: r.vanhack.ca
+    urlredirector:
+        network_mode: bridge
+        environment:
+            VIRTUAL_HOST: r.vanhack.ca
+            LETSENCRYPT_HOST: r.vanhack.ca

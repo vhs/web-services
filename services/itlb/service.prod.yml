@@ -1,7 +1,6 @@
-
 services:
-  itlb:
-    network_mode: bridge
-    environment:
-      VIRTUAL_HOST: itlb.vanhack.ca,isthelaserbusy.vanhack.ca
-      LETSENCRYPT_HOST: itlb.vanhack.ca,isthelaserbusy.vanhack.ca
+    itlb:
+        network_mode: bridge
+        environment:
+            VIRTUAL_HOST: itlb.vanhack.ca,isthelaserbusy.vanhack.ca
+            LETSENCRYPT_HOST: itlb.vanhack.ca,isthelaserbusy.vanhack.ca

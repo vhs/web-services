@@ -1,8 +1,7 @@
-
 services:
-  redirect:
-    image: nginx:1
-    container_name: redirect
-    restart: always
-    volumes:
-    - ./services/redirect/conf.d:/etc/nginx/conf.d/
+    redirect:
+        image: nginx:1
+        container_name: redirect
+        restart: always
+        volumes:
+            - ./services/redirect/conf.d:/etc/nginx/conf.d/

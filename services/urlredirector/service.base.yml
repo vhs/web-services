@@ -1,8 +1,7 @@
-
 services:
-  urlredirector:
-    image: vanhack/redirect:latest
-    container_name: urlredirector
-    restart: always
-    volumes:
-    - ./services/urlredirector/config.json:/app/config.json
+    urlredirector:
+        image: vanhack/redirect:latest
+        container_name: urlredirector
+        restart: always
+        volumes:
+            - ./services/urlredirector/config.json:/app/config.json

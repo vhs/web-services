@@ -1,11 +1,10 @@
-
 services:
-  isvhsopen:
-    image: vanhack/isvhsopen:latest
-    container_name: isvhsopen
-    restart: always
-    depends_on:
-      - influxdb
-    env_file:
-      - ./env/_influxdb
-      - ./env/_slack
+    isvhsopen:
+        image: vanhack/isvhsopen:latest
+        container_name: isvhsopen
+        restart: always
+        depends_on:
+            - influxdb
+        env_file:
+            - ./env/_influxdb
+            - ./env/_slack

@@ -1,7 +1,6 @@
-
 services:
-  portal:
-    network_mode: bridge
-    environment:
-      VIRTUAL_HOST: portal.vanhack.ca
-      LETSENCRYPT_HOST: portal.vanhack.ca
+    portal:
+        network_mode: bridge
+        environment:
+            VIRTUAL_HOST: portal.vanhack.ca
+            LETSENCRYPT_HOST: portal.vanhack.ca

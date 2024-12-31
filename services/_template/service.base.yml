@@ -1,5 +1,5 @@
 services:
-  TEMPLATE:
-    image: vanhack/TEMPLATE:latest
-    container_name: TEMPLATE
-    restart: always
+    TEMPLATE:
+        image: vanhack/TEMPLATE:latest
+        container_name: TEMPLATE
+        restart: always

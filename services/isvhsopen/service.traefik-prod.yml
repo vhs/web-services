@@ -1,12 +1,11 @@
-
 services:
-  isvhsopen:
-    networks:
-      - proxy
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.vanhack-isvhsopen-prod.rule=(Host(`isvhsopen.com`) || Host(`www.isvhsopen.com`) || Host(`isvhsopen.vanhack.ca`) || Host(`door.vanhack.ca`) || Host(`isvhsopen.vanhack.space`) || Host(`door.vanhack.space`))"
-      - "traefik.http.routers.vanhack-isvhsopen-prod.entryPoints=web,websecure"
-      - "traefik.http.routers.vanhack-isvhsopen-prod.tls=true"
-      - "traefik.http.routers.vanhack-isvhsopen-prod.tls.certresolver=lets-encrypt"
-      - "traefik.docker.network=proxy"
+    isvhsopen:
+        networks:
+            - proxy
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.vanhack-isvhsopen-prod.rule=(Host(`isvhsopen.com`) || Host(`www.isvhsopen.com`) || Host(`isvhsopen.vanhack.ca`) || Host(`door.vanhack.ca`) || Host(`isvhsopen.vanhack.space`) || Host(`door.vanhack.space`))'
+            - 'traefik.http.routers.vanhack-isvhsopen-prod.entryPoints=web,websecure'
+            - 'traefik.http.routers.vanhack-isvhsopen-prod.tls=true'
+            - 'traefik.http.routers.vanhack-isvhsopen-prod.tls.certresolver=lets-encrypt'
+            - 'traefik.docker.network=proxy'

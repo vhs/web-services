@@ -1,6 +1,5 @@
 networks:
-  proxy:
-    external: true
-  website-db:
-    name: website-db
-    driver: bridge
+    proxy:
+        external: true
+    website-db:
+        name: website-db
